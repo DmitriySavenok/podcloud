@@ -13,5 +13,7 @@ vhFix();
 actualYear();
 scrollToAnchor.init();
 
-header.init();
+header.headerBackgroudScroll();
 lazyLoading.init();
+
+console.log('main файл')

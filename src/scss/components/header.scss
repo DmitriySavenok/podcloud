@@ -1,11 +1,21 @@
 .header {
+	position: fixed;
+	top: 0;
+	z-index: 100;
 	padding: 30px 0;
-	background-color: $color-black;
+	width: 100%;
+	transition: background-color $duration-normal;
 
 	&__content {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+	}
+
+	&__buttons-block {
+		display: flex;
+		align-items: center;
+		gap: 50px;
 	}
 
 	&__logo {
@@ -36,16 +46,25 @@
 	&__navigation-link {
 		position: relative;
 		font-family: $font-title;
-		font-weight: 400;
+		font-weight: 200;
 		font-size: 16px;
 		color: $color-white;
-		transition: color $duration-normal;
+		transition: color opacity $duration-normal;
+	}
+
+	&--scrolling {
+		background-color: rgba(16, 16, 16, 0.75);
+		backdrop-filter: blur(10px);
 	}
 }
 
 @media (hover: hover) and (pointer: fine) {
 	.header__navigation-link:hover {
 		color: $accent-color;
+	}
+
+	.header__navigation-link:active {
+		opacity: 0.6;
 	}
 
 	.header__navigation-link::after {

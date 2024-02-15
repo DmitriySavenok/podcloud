@@ -8,4 +8,12 @@ header.header
 				li
 					a.header__navigation-link.js-to-anchor(href=object.url data-link=key)
 						!= object.name
-		a(href="#").header__log-in.button.button-fill Войти
+
+
+		.header__buttons-block
+			.search
+				<form name="search">
+					<input type="text" class="search__input">
+				</form>
+				+svg("search").search__icon
+			a(href="#").header__log-in.button.button-fill Войти

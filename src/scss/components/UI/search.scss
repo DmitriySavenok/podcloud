@@ -1,0 +1,40 @@
+.search {
+	position: relative;
+
+	&__input {
+		outline: none;
+		border: 2px solid transparent;
+		padding: 15px 0;
+		width: 20px;
+		box-sizing: border-box;
+		font-family: $font-primary;
+		font-size: 16px;
+		color: $color-black;
+		background: none;
+		transition: $duration-normal;
+	}
+}
+
+.search:hover .search__input {
+	border: 2px solid $accent-color;
+	border-radius: 10px;
+	padding: 15px 30px;
+	width: 350px;
+	background: $color-white;
+}
+
+.search svg {
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	width: 20px;
+	height: 20px;
+	opacity: 1;
+	transform: translate(-50%, -50%);
+	transition: opacity $duration-normal;
+}
+
+.search:hover svg {
+	z-index: -1;
+	opacity: 0;
+}
