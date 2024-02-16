@@ -1,28 +1,2 @@
 main.home
-	+lazyPicture({
-		src: `${baseDir}images/mem.jpg`,
-		alt: 'Мемчик',
-	}).home__picture#hello
-
-	.container
-		p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, doloremque repellendus rerum excepturi sed ex voluptas, culpa obcaecati, magnam velit sapiente neque reiciendis consequatur unde minus corrupti laboriosam enim odio.
-		p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, doloremque repellendus rerum excepturi sed ex voluptas, culpa obcaecati, magnam velit sapiente neque reiciendis consequatur unde minus corrupti laboriosam enim odio.
-		p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, doloremque repellendus rerum excepturi sed ex voluptas, culpa obcaecati, magnam velit sapiente neque reiciendis consequatur unde minus corrupti laboriosam enim odio.
-		p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, doloremque repellendus rerum excepturi sed ex voluptas, culpa obcaecati, magnam velit sapiente neque reiciendis consequatur unde minus corrupti laboriosam enim odio.
-		p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, doloremque repellendus rerum excepturi sed ex voluptas, culpa obcaecati, magnam velit sapiente neque reiciendis consequatur unde minus corrupti laboriosam enim odio.
-		p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, doloremque repellendus rerum excepturi sed ex voluptas, culpa obcaecati, magnam velit sapiente neque reiciendis consequatur unde minus corrupti laboriosam enim odio.
-		p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, doloremque repellendus rerum excepturi sed ex voluptas, culpa obcaecati, magnam velit sapiente neque reiciendis consequatur unde minus corrupti laboriosam enim odio.
-		p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, doloremque repellendus rerum excepturi sed ex voluptas, culpa obcaecati, magnam velit sapiente neque reiciendis consequatur unde minus corrupti laboriosam enim odio.
-		p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, doloremque repellendus rerum excepturi sed ex voluptas, culpa obcaecati, magnam velit sapiente neque reiciendis consequatur unde minus corrupti laboriosam enim odio.
-		p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, doloremque repellendus rerum excepturi sed ex voluptas, culpa obcaecati, magnam velit sapiente neque reiciendis consequatur unde minus corrupti laboriosam enim odio.
-		p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, doloremque repellendus rerum excepturi sed ex voluptas, culpa obcaecati, magnam velit sapiente neque reiciendis consequatur unde minus corrupti laboriosam enim odio.
-
-	//- picture.home__picture.home__picture--2#bye
-	+lazyPicture({
-		src: `${baseDir}images/mem-2.jpg`,
-		alt: 'Мемчик 2',
-	}, [
-		{
-			srcset: `${baseDir}images/mem-2.jpg`,
-		}
-	]).home__picture.home__picture--2#bye
+	include ../components/hero

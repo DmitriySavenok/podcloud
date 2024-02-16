@@ -1,0 +1,215 @@
+.hero {
+	color: $color-white;
+	background-color: #101010;
+
+	&__bg {
+		background-image: url("../images/hero-bg-lines.png");
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	&__bg-gradient {
+		position: relative;
+		background: radial-gradient(rgba(0, 0, 0, 0), rgb(16, 16, 16) 100%);
+	}
+
+	&__bg-circle {
+		position: absolute;
+		left: 50%;
+		border-radius: 100%;
+		width: 361px;
+		height: 361px;
+		background-color: $accent-color;
+		animation: pulsing 24s infinite;
+	}
+
+	&__content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr;
+		padding-top: 120px;
+		padding-bottom: 120px;
+		gap: 40px;
+	}
+
+	&__main-info {
+		padding-top: 50px;
+	}
+
+	&__main-title {
+		font-family: $font-title;
+		font-weight: 700;
+		font-size: 46px;
+	}
+
+	&__description {
+		grid-column: 1 / 2;
+		padding: 15px 0;
+		font-family: $font-primary;
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 175%;
+		color: $color-gray;
+	}
+
+	&__buttons-block {
+		display: flex;
+		grid-column: 1 / 2;
+		padding: 30px 0;
+		gap: 15px;
+	}
+
+	&__interactive-block {
+		position: relative;
+		grid-column: 2 / 3;
+		grid-row: 1 / 2;
+	}
+
+	&__image-1 {
+		position: absolute;
+		left: 50px;
+		top: 0;
+		z-index: 10;
+		width: auto;
+		height: 300px;
+		fill: $accent-color;
+	}
+
+	&__image-2 {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		width: auto;
+		height: 300px;
+		fill: $accent-color;
+	}
+
+	&__info-card {
+		position: absolute;
+		z-index: 20;
+		border-radius: 20px;
+		padding: 25px 30px;
+		width: 390px;
+		background-color: #1d1d1d;
+
+		.card-name {
+			font-family: $font-title;
+			color: $accent-color;
+		}
+
+		.card-title {
+			font-family: $font-title;
+			color: $color-white;
+		}
+
+		.card-description {
+			padding-top: 10px;
+			padding-bottom: 15px;
+			font-family: $font-primary;
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 150%;
+		}
+
+		.card-link {
+			display: flex;
+			align-items: center;
+			width: fit-content;
+			text-transform: uppercase;
+			opacity: 1;
+			gap: 10px;
+
+			&-icon {
+				transition: background-color $duration-normal;
+			}
+
+			svg {
+				width: 17px;
+				height: 17px;
+				transform: translateX(1px);
+			}
+
+			.play-icon {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border-radius: 50%;
+				width: 43px;
+				height: 43px;
+				background-color: rgba(255, 255, 255, 0.1);
+			}
+
+			.arrow-up-right-icon {
+				border-radius: 10px;
+				padding: 10px 15px;
+				background-color: $accent-color;
+			}
+		}
+	}
+
+	.card-1 {
+		right: 0;
+		top: 0;
+	}
+
+	.card-2 {
+		left: 0;
+		bottom: 0;
+	}
+}
+
+@keyframes pulsing {
+	0% {
+		opacity: 0.2;
+		filter: blur(20px);
+		transform: translate(70%, 68%) scale(0.2, 0.2);
+	}
+
+	25% {
+		opacity: 0.5;
+		filter: blur(30px);
+		transform: translate(-50%, 37%) scale(1, 1);
+	}
+
+	50% {
+		opacity: 0.1;
+		filter: blur(20px);
+		transform: translate(-150%, 87%) scale(0.5, 0.5);
+	}
+
+	75% {
+		opacity: 0.6;
+		filter: blur(30px);
+		transform: translateX(-50%) scale(1, 1);
+	}
+
+	100% {
+		opacity: 0.1;
+		filter: blur(20px);
+		transform: translate(70%, 68%) scale(0.2, 0.2);
+	}
+}
+
+@media (hover: hover) and (pointer: fine) {
+	.podcast-link:hover {
+		.play-icon {
+			background-color: $accent-color;
+		}
+	}
+
+	.our-team-link:hover {
+		.arrow-up-right-icon {
+			background-color: $color-white;
+
+			svg {
+				fill: $accent-color;
+			}
+		}
+	}
+
+	.card-link:active {
+		opacity: 0.5;
+		transition: opacity $duration-normal;
+	}
+}

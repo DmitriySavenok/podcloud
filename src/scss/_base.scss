@@ -148,6 +148,15 @@ iframe {
 	min-height: 100vh; // fallback
 	// stylelint-disable-next-line
 	min-height: var(--vh);
+	background-color: $color-black;
+}
+
+.text-light {
+	color: $color-white;
+}
+
+.text-gray {
+	color: $color-gray;
 }
 
 /* stylelint-disable */

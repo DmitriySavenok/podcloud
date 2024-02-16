@@ -1,21 +1,49 @@
-.button-fill {
+.button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	border-radius: 10px;
 	padding: 15px 30px;
+	width: fit-content;
+	height: min-content;
 	font-family: $font-primary;
 	font-weight: 500;
 	font-size: 16px;
+	transition: background-color $duration-normal;
+	gap: 10px;
+
+	svg {
+		max-width: 20px;
+		max-height: 20px;
+		fill: $color-white;
+	}
+}
+
+.button-fill {
+	border: 1px $accent-color solid;
 	color: $color-white;
 	background-color: $accent-color;
-	transition: background-color $duration-normal;
+}
+
+.button-outline {
+	border: 1px $accent-color solid;
+	color: $accent-color;
+	background: transparent;
 }
 
 @media (hover: hover) and (pointer: fine) {
-	.button:hover {
+	.button-fill:hover {
 		background-color: $accent-color-hover;
 	}
 
 	.button:active {
-		box-shadow: 0 0 10px 4px rgba(26, 18, 36, 0.2) inset;
+		box-shadow: 0 0 10px 12px rgba(26, 18, 36, 0.2) inset;
 		background-color: $accent-color-hover;
+	}
+
+	.button-outline:hover {
+		border: 1px $color-white solid;
+		color: $accent-color;
+		background-color: $color-white;
 	}
 }
