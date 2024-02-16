@@ -10,12 +10,23 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		gap: 30px;
 	}
 
 	&__buttons-block {
+		position: relative;
 		display: flex;
 		align-items: center;
 		gap: 50px;
+	}
+
+	&__buttons-block::after {
+		content: "";
+		position: absolute;
+		right: 150px;
+		width: 2px;
+		height: 29px;
+		background-color: #2e2e2e;
 	}
 
 	&__logo {
@@ -40,6 +51,7 @@
 
 	&__navigation {
 		display: flex;
+		flex-wrap: wrap;
 		gap: 45px;
 	}
 
