@@ -21,7 +21,7 @@
 		width: 361px;
 		height: 361px;
 		background-color: $accent-color;
-		animation: pulsing 24s infinite;
+		animation: hero__pulsing 24s infinite;
 	}
 
 	&__content {
@@ -159,7 +159,7 @@
 	}
 }
 
-@keyframes pulsing {
+@keyframes hero__pulsing {
 	0% {
 		opacity: 0.2;
 		filter: blur(20px);

@@ -1,13 +1,12 @@
 header.header
 	.header__content.container
-		a(href="#").header__logo
+		a(href="#").header__logo.logo
 			+svg("logo")
 			span.logo-text PodCloud
-		ul.header__navigation
+		nav.header__navigation
 			each object, key in data.header.navigation
-				li
-					a.header__navigation-link.js-to-anchor(href=object.url data-link=key)
-						!= object.name
+				a.header__navigation-link.js-to-anchor(href=object.url data-link=key)
+					!= object.name
 
 
 		.header__buttons-block

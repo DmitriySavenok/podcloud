@@ -1,17 +1,219 @@
 .footer {
-	display: flex;
-	margin-top: auto;
-	padding: 20px 30px;
-	width: 100%;
+	position: relative;
+	color: $color-white;
+	background-color: $background-dark;
 
-	&__developer {
-		margin-left: auto;
-		font-size: 12px;
-		line-height: 16px;
+	&__bg {
+		background-image: url("../images/hero-bg-lines.png");
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
 	}
 
-	&__copy {
-		font-size: 12px;
-		line-height: 16px;
+	&__bg-gradient {
+		position: relative;
+		background: radial-gradient(rgba(13, 13, 13, 0), rgb(13, 13, 13) 100%);
+	}
+
+	&__bg-circle {
+		position: absolute;
+		left: 50%;
+		border-radius: 100%;
+		width: 150px;
+		height: 150px;
+		background-color: $accent-color;
+		transition: transform $duration-normal;
+		animation: footer__pulsing 24s infinite;
+	}
+
+	&__subscribe {
+		position: absolute;
+		left: 50%;
+		top: 0;
+		z-index: 10;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		border-radius: 30px;
+		padding: 42px 300px 80px;
+		max-width: 1350px;
+		background-image: url("../images/hero-bg-lines.png");
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-color: $color-black;
+		opacity: 1;
+		transform: translate(-50%, -50%);
+
+		.subscribe-content {
+			position: relative;
+			padding-bottom: 30px;
+			text-align: center;
+		}
+
+		.subscribe-content::before {
+			content: url("../images/subscribe-left-img-bg.png");
+			position: absolute;
+			left: -270px;
+			top: 0;
+		}
+
+		.subscribe-content::after {
+			content: url("../images/subscribe-right-img-bg.png");
+			position: absolute;
+			right: -270px;
+			top: 0;
+		}
+
+		.subscribe-title {
+			font-family: $font-title;
+			font-size: 42px;
+		}
+
+		.subscribe-form {
+			position: relative;
+		}
+
+		.subscribe-input {
+			border: none;
+			border-radius: 50px;
+			padding: 16px 25px;
+			min-width: 580px;
+		}
+
+		.subscribe-submit {
+			position: absolute;
+			right: 4px;
+			top: 3px;
+			border-radius: 50%;
+			padding: 12px;
+		}
+	}
+
+	&__content {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: auto auto auto;
+		padding-top: 200px;
+		padding-bottom: 60px;
+		gap: 0 110px;
+	}
+
+	&__column {
+		display: flex;
+		flex-direction: column;
+		padding-bottom: 40px;
+	}
+
+	&__column-title {
+		padding-bottom: 10px;
+	}
+
+	&__title {
+		grid-column: 2 / 5;
+		grid-row: 1 / 2;
+		font-family: $font-title;
+	}
+
+	&__contacts {
+		grid-column: 2 / 3;
+		grid-row: 2 / 3;
+	}
+
+	&__address {
+		grid-column: 3 / 4;
+		grid-row: 2 / 3;
+	}
+
+	&__social {
+		grid-column: 4 / 5;
+		grid-row: 2 / 3;
+	}
+
+	&__copyright {
+		grid-column: 4 / 5;
+		grid-row: 3 / 4;
+	}
+
+	.social-list {
+		display: flex;
+		gap: 30px;
+
+		svg {
+			height: 20px;
+			max-width: 26px;
+			fill: $color-gray;
+			transition: fill $duration-normal;
+		}
+	}
+
+	.contact-link + .contact-link {
+		padding-top: 10px;
+	}
+
+	.privacy-policy {
+		grid-column: 2 / 3;
+		grid-row: 3 / 4;
+	}
+
+	.user-agreement {
+		grid-column: 3 / 4;
+		grid-row: 3 / 4;
+	}
+
+	&__link {
+		font-weight: 200;
+		font-size: 16px;
+		color: $color-gray;
+		transition: color opacity $duration-normal;
+	}
+}
+
+@keyframes footer__pulsing {
+	0% {
+		opacity: 0.3;
+		filter: blur(20px);
+		transform: translate(180%, 250%) scale(0.2, 0.2);
+	}
+
+	50% {
+		opacity: 0.35;
+		filter: blur(20px);
+		transform: translate(-230%, 235%) scale(1.2, 1.2);
+	}
+
+	75% {
+		opacity: 0.7;
+		filter: blur(30px);
+		transform: scale(1, 1);
+	}
+
+	100% {
+		opacity: 0.3;
+		filter: blur(20px);
+		transform: translate(180%, 250%) scale(0.2, 0.2);
+	}
+}
+
+@media (hover: hover) and (pointer: fine) {
+	.footer__link:hover {
+		color: $accent-color;
+	}
+
+	.footer__link:active {
+		opacity: 0.5;
+	}
+
+	.social-list a:hover {
+		svg {
+			fill: $accent-color;
+		}
+	}
+
+	.social-list a:active {
+		svg {
+			opacity: 0.5;
+			transition: opacity $duration-normal;
+		}
 	}
 }

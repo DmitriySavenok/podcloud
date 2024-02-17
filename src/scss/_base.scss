@@ -148,11 +148,36 @@ iframe {
 	min-height: 100vh; // fallback
 	// stylelint-disable-next-line
 	min-height: var(--vh);
-	background-color: $color-black;
+	background-color: $background-dark;
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 10px;
+
+	svg {
+		width: 29px;
+		height: 29px;
+		fill: $accent-color;
+	}
+
+	span {
+		font-family: $font-title;
+		font-weight: 700;
+		font-size: 18px;
+		color: $color-white;
+	}
 }
 
 .text-light {
 	color: $color-white;
+}
+
+.text-weight-200 {
+	font-weight: 200;
+	font-size: 16px;
 }
 
 .text-gray {

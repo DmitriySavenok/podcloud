@@ -1,6 +1,45 @@
 footer.footer
-	.footer__copyright
-		span(data-actual-year)
-
-	.footer__developer
-		| &copy;&nbsp;Девять линий
+	.footer__subscribe
+		.subscribe-content
+			h3.subscribe-title Подпишись!
+			p.text-weight-200.text-gray Подписка на новостную рассылку - отличный способ быть в курсе последних серий и обновлений.
+		form(name="subscribe").subscribe-form
+			input(type="text" placeholder="Введите адрес эл. почты").subscribe-input
+			button(type="submit").button.button-fill.subscribe-submit
+				+svg("arrow-up-right")
+	.footer__bg
+		.footer__bg-gradient
+			.footer__bg-circle
+			.footer__content.container
+				a(href="#").footer__logo.logo
+					+svg("logo")
+					span.logo-text PodCloud
+				h2.footer__title Мы сотрудничаем с амбициозными брендами и людьми;<br>Давайте создадим что-то великое вместе.
+				a(href="#").footer__link.privacy-policy Политика конфиденциальности
+				a(href="#").footer__link.user-agreement Пользовательское соглашение
+				.footer__column.footer__contacts
+					h3.footer__column-title Связаться с нами:
+					a(href="mailto:podcloud@xyz.com").footer__link.contact-link podcloud@xyz.com
+					a(href="tel:+11234567890").footer__link.contact-link +1 123 456 7890
+				.footer__column.footer__address
+					h3.footer__column-title Заходите в гости:
+					span.text-weight-200.text-gray 115 Cedar Rapids, IA 52404, United States
+				.footer__column.footer__social
+					h3.footer__column-title Мы в соц.сетях:
+					ul.social-list
+						li
+							a(href="#")
+								+svg("fb")
+						li
+							a(href="#")
+								+svg("tw")
+						li
+							a(href="#")
+								+svg("inst")
+						li
+							a(href="#")
+								+svg("youtube")
+				.footer__copyright.text-weight-200.text-gray
+					span © &nbsp;
+					span(data-actual-year)
+					span &nbsp;PodCloud

@@ -29,26 +29,6 @@
 		background-color: #2e2e2e;
 	}
 
-	&__logo {
-		display: flex;
-		align-items: center;
-		justify-content: flex-start;
-		gap: 10px;
-
-		svg {
-			width: 29px;
-			height: 29px;
-			fill: $accent-color;
-		}
-
-		span {
-			font-family: $font-title;
-			font-weight: 700;
-			font-size: 18px;
-			color: $color-white;
-		}
-	}
-
 	&__navigation {
 		display: flex;
 		flex-wrap: wrap;
