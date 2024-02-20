@@ -1,12 +1,14 @@
 footer.footer
-	.footer__subscribe
-		.subscribe-content
-			h3.subscribe-title Подпишись!
-			p.text-weight-200.text-gray Подписка на новостную рассылку - отличный способ быть в курсе последних серий и обновлений.
-		form(name="subscribe").subscribe-form
-			input(type="text" placeholder="Введите адрес эл. почты").subscribe-input
-			button(type="submit").button.button-fill.subscribe-submit
-				+svg("arrow-up-right")
+	.footer__bg-light
+		.footer__subscribe
+			.subscribe-bg-img
+				.subscribe-content
+					h3.subscribe-title Подпишись!
+					p.text-weight-200.text-gray Подписка на новостную рассылку - отличный способ быть в курсе последних серий и обновлений.
+				form(name="subscribe").subscribe-form
+					input(type="text" placeholder="Введите адрес эл. почты").subscribe-input
+					button(type="submit").button.button-fill.subscribe-submit
+						+svg("arrow-up-right")
 	.footer__bg
 		.footer__bg-gradient
 			.footer__bg-circle

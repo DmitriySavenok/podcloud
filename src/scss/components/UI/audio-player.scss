@@ -1,0 +1,153 @@
+.audio-player {
+	display: grid;
+	grid-template-columns: auto 50px;
+	grid-template-rows: auto;
+	overflow: hidden;
+	width: 350px;
+	height: 50px;
+	font-size: 0.75em;
+	color: $color-white;
+
+	.timeline-block {
+		position: relative;
+		grid-column: 1 / 2;
+	}
+
+	.timeline-bg {
+		width: 100%;
+		height: 100%;
+		fill: $color-gray;
+	}
+
+	.timeline {
+		position: absolute;
+		left: 0;
+		top: 0;
+		grid-row: 1 / 2;
+		width: 100%;
+		height: 100%;
+		cursor: pointer;
+
+		.progress {
+			width: 0%;
+			height: 100%;
+			fill: $accent-color;
+			transition: 0.25s;
+		}
+	}
+
+	.controls {
+		position: relative;
+		z-index: 2;
+		display: flex;
+		align-items: stretch;
+		justify-content: space-between;
+		grid-column: 2 / 3;
+		grid-row: 1 / 2;
+		padding: 0 20px;
+
+		> * {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.toggle-play {
+			&.play {
+				position: relative;
+				left: 0;
+				background: url("../images/sprites/svg/play.svg");
+				background-position: center;
+				background-repeat: no-repeat;
+				cursor: pointer;
+
+				svg {
+					width: 20px;
+					height: 20px;
+					fill: $accent-color;
+				}
+
+				&:hover {
+					transform: scale(1.1);
+				}
+			}
+
+			&.pause {
+				position: relative;
+				width: 20px;
+				height: 15px;
+				cursor: pointer;
+
+				&::before {
+					content: "";
+					position: absolute;
+					left: 4px;
+					top: 0;
+					width: 3px;
+					height: 15px;
+					background-color: $accent-color;
+				}
+
+				&::after {
+					content: "";
+					position: absolute;
+					right: 4px;
+					top: 0;
+					width: 3px;
+					height: 15px;
+					background-color: $accent-color;
+				}
+
+				&:hover {
+					transform: scale(1.1);
+				}
+			}
+		}
+
+		.time {
+			display: flex;
+
+			> * {
+				padding: 2px;
+			}
+		}
+
+		.volume-container {
+			display: none;
+			align-items: center;
+			height: 26px;
+			cursor: pointer;
+
+			.volume-button {
+				.volume {
+					transform: scale(0.7);
+				}
+			}
+
+			.volume-slider {
+				position: absolute;
+				left: -3px;
+				top: 15px;
+				z-index: -1;
+				width: 0;
+				height: 15px;
+				box-shadow: 0 0 20px #000a;
+				background: $color-white;
+				transition: 0.25s;
+
+				.volume-percentage {
+					width: 75%;
+					height: 100%;
+					background: #ff7f50;
+				}
+			}
+
+			&:hover {
+				.volume-slider {
+					left: -123px;
+					width: 120px;
+				}
+			}
+		}
+	}
+}

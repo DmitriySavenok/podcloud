@@ -1,18 +1,21 @@
 
 function headerBackgroudScroll() {
-	const header = document.querySelector('.header'); // Здесь класс вашей шапки
-	window.addEventListener('scroll', function() {
-	  if (window.scrollY >= 54) {
-		header.classList.add('header--scrolling'); // Добавить класс, который будет менять стили
-	  } else {
-		header.classList.remove('header--scrolling'); // Убрать
-	  }
+	const header = document.querySelector('.header');
+	header.classList.remove('header--scrolling');
+	if(window.scrollY != 0) {
+		header.classList.add('header--scrolling');
+	} else {
+		header.classList.remove('header--scrolling');
+	}
+	window.addEventListener('scroll', function () {
+		if (window.scrollY >= 54) {
+			header.classList.add('header--scrolling');
+		} else {
+			header.classList.remove('header--scrolling');
+		}
 	});
-	console.log('headerBackgroudScroll скрипт')
 }
 
 export default {
 	headerBackgroudScroll
 }
-
-console.log('header файл')

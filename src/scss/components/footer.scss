@@ -1,7 +1,12 @@
 .footer {
-	position: relative;
 	color: $color-white;
 	background-color: $background-dark;
+
+	&__bg-light {
+		position: relative;
+		padding-top: 200px;
+		background-color: $color-white;
+	}
 
 	&__bg {
 		background-image: url("../images/hero-bg-lines.png");
@@ -43,7 +48,7 @@
 		background-repeat: no-repeat;
 		background-color: $color-black;
 		opacity: 1;
-		transform: translate(-50%, -50%);
+		transform: translate(-50%);
 
 		.subscribe-content {
 			position: relative;
@@ -51,18 +56,22 @@
 			text-align: center;
 		}
 
-		.subscribe-content::before {
+		.subscribe-bg-img {
+			position: relative;
+		}
+
+		.subscribe-bg-img::before {
 			content: url("../images/subscribe-left-img-bg.png");
 			position: absolute;
 			left: -270px;
 			top: 0;
 		}
 
-		.subscribe-content::after {
+		.subscribe-bg-img::after {
 			content: url("../images/subscribe-right-img-bg.png");
 			position: absolute;
 			right: -270px;
-			top: 0;
+			top: 25%;
 		}
 
 		.subscribe-title {
@@ -88,6 +97,26 @@
 			border-radius: 50%;
 			padding: 12px;
 		}
+	}
+
+	.footer__subscribe::after {
+		content: "";
+		position: absolute;
+		right: 40px;
+		top: 0;
+		width: 40px;
+		height: 40px;
+		background-color: $color-white;
+	}
+
+	.footer__subscribe::before {
+		content: "";
+		position: absolute;
+		right: 0;
+		top: 40px;
+		width: 40px;
+		height: 40px;
+		background-color: $color-white;
 	}
 
 	&__content {

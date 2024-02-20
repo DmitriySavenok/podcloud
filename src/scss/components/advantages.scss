@@ -1,0 +1,101 @@
+.advantages {
+	padding: 120px 0;
+	background-color: $color-white;
+
+	&__content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 0 85px;
+	}
+
+	&__image {
+		grid-column: 1 / 2;
+	}
+
+	&__info {
+		align-self: center;
+		grid-column: 2 / 3;
+	}
+
+	&__title {
+		font-family: $font-title;
+		font-weight: 700;
+		font-size: 42px;
+	}
+
+	&__description {
+		font-weight: 200;
+		font-size: 16px;
+		color: $color-dark-gray;
+	}
+
+	&__list {
+		padding: 15px 0;
+
+		li {
+			position: relative;
+			padding: 10px 0;
+			padding-left: 40px;
+		}
+
+		li::before {
+			content: url("../images/check.svg");
+			position: absolute;
+			left: 0;
+			top: 6px;
+		}
+	}
+
+	&__audio {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+
+		audio {
+			display: none;
+		}
+	}
+
+	.author {
+		position: relative;
+		display: flex;
+		align-items: center;
+		gap: 10px;
+
+		&-photo {
+			position: relative;
+			z-index: 10;
+			overflow: hidden;
+			border-radius: 50%;
+			width: auto;
+			height: 51px;
+		}
+
+		&-bg {
+			position: absolute;
+			left: -5px;
+			top: -5px;
+			z-index: 9;
+			width: 30px;
+			height: 61px;
+		}
+
+		&-info {
+			display: flex;
+			flex-direction: column;
+			width: min-content;
+		}
+
+		&-name {
+			font-family: $font-title;
+			font-weight: 500;
+			font-size: 14px;
+		}
+
+		&-post {
+			font-family: $font-primary;
+			font-weight: 200;
+			font-size: 12px;
+		}
+	}
+}
