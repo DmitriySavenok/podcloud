@@ -14,7 +14,7 @@
 		width: 120%;
 		height: 180px;
 		background-color: $accent-color;
-		transform: rotate(2deg);
+		transform: rotate(1.5deg);
 	}
 
 	&__bg::before {
@@ -30,7 +30,7 @@
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-color: #101010;
-		transform: rotate(-2deg);
+		transform: rotate(-3deg);
 	}
 
 	&__title {
@@ -50,6 +50,10 @@
 		padding-top: 70px;
 		color: $color-white;
 		gap: 120px;
+
+		li {
+			transition: all 0.1s ease-in-out;
+		}
 
 		.categories__link {
 			position: relative;
@@ -102,3 +106,35 @@
 		display: block;
 	}
 }
+
+.categories__list {
+	animation: scroll 20s linear infinite;
+}
+
+.swiper:hover .categories__list {
+	animation-play-state: paused;
+}
+
+// @keyframes scroll {
+// 	from {
+// 		transform: translateX(0);
+// 	}
+
+// 	to {
+// 		transform: translateX(calc(-100% - 120px));
+// 	}
+// }
+@keyframes scroll {
+	from {
+		transform: translateX(0);
+	}
+
+	to {
+		transform: translateX(-220%);
+	}
+}
+
+// .swiper-wrapper {
+// 	-webkit-transition-timing-function: linear !important;
+// 			transition-timing-function: linear !important;
+//   }
