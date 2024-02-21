@@ -30,11 +30,12 @@
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-color: #101010;
-		transform: rotate(-3deg);
+		transform: rotate(-2deg);
 	}
 
 	&__title {
 		margin-top: 0;
+		padding-bottom: 30px;
 		font-family: $font-title;
 		font-weight: 700;
 		font-size: 28px;
@@ -48,12 +49,8 @@
 		display: flex;
 		align-items: center;
 		padding-top: 70px;
-		color: $color-white;
+		animation: scroll 24s linear infinite;
 		gap: 120px;
-
-		li {
-			transition: all 0.1s ease-in-out;
-		}
 
 		.categories__link {
 			position: relative;
@@ -105,36 +102,18 @@
 	.categories__link:hover::before {
 		display: block;
 	}
+
+	.categories__bg:hover .categories__list {
+		animation-play-state: paused;
+	}
 }
 
-.categories__list {
-	animation: scroll 20s linear infinite;
-}
-
-.swiper:hover .categories__list {
-	animation-play-state: paused;
-}
-
-// @keyframes scroll {
-// 	from {
-// 		transform: translateX(0);
-// 	}
-
-// 	to {
-// 		transform: translateX(calc(-100% - 120px));
-// 	}
-// }
 @keyframes scroll {
 	from {
 		transform: translateX(0);
 	}
 
 	to {
-		transform: translateX(-220%);
+		transform: translateX(-184%);
 	}
 }
-
-// .swiper-wrapper {
-// 	-webkit-transition-timing-function: linear !important;
-// 			transition-timing-function: linear !important;
-//   }
