@@ -90,6 +90,10 @@
 			min-width: 580px;
 		}
 
+		.subscribe-input:focus {
+			outline: 2px solid $accent-color;
+		}
+
 		.subscribe-submit {
 			position: absolute;
 			right: 4px;
