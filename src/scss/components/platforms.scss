@@ -1,0 +1,30 @@
+.platforms {
+	padding: 70px 0;
+	background-image: url("../images/hero-bg-lines.png");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: $color-black;
+
+	&__list {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		svg {
+			max-width: 100px;
+			max-height: 67px;
+			fill: $color-white;
+			opacity: 20%;
+			transition: opacity $duration-normal;
+		}
+	}
+}
+
+@media (hover: hover) and (pointer: fine) {
+	.platforms__list a:hover {
+		svg {
+			opacity: 100%;
+		}
+	}
+}

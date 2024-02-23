@@ -1,0 +1,7 @@
+section.platforms
+	.platforms__content.container
+		ul.platforms__list
+			each object, key in data.platforms.brand
+				li(data-link=key)
+					a(href=object.url title=object.platform_name)
+						+svg(object.svg_logo_name)
