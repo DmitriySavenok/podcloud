@@ -8,7 +8,7 @@ function categoriesSlider() {
 		freeMode: true,
 		loop: true,
 		autoplay: {
-			delay: 1,
+			delay: 100,
 			pauseOnMouseEnter: true
 		},
 		grabCursor: true,

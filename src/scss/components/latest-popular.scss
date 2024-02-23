@@ -1,0 +1,130 @@
+.latest-popular {
+	color: $color-black;
+	background-color: $color-white;
+
+	&__head {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto auto;
+	}
+
+	&__title {
+		grid-column: 1 / 2;
+		grid-row: 1 / 2;
+		font-family: $font-title;
+		font-size: 42px;
+	}
+
+	&__description {
+		grid-column: 1 / 2;
+		grid-row: 2 / 3;
+		font-weight: 200;
+		color: $color-dark-gray;
+	}
+
+	&__link-all {
+		align-self: center;
+		justify-self: flex-end;
+		grid-column: 2 / 3;
+		grid-row: 1 / 3;
+	}
+
+	&__content {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		padding-top: 40px;
+		gap: 30px;
+	}
+}
+
+.podcast-card {
+	font-weight: 300;
+	font-size: 16px;
+	color: $color-dark-gray;
+
+	&__img {
+		position: relative;
+		overflow: hidden;
+		border-radius: 20px;
+		height: 315px;
+
+		img {
+			width: auto;
+			height: 100%;
+		}
+	}
+
+	&__play-icon {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+		width: 60px;
+		height: 60px;
+		background-color: $accent-color-opacity-60;
+		transform: translate(-50%, -50%);
+		transition: all $duration-normal;
+
+		svg {
+			width: 22px;
+			height: 22px;
+			fill: $color-white;
+			transition: all $duration-normal;
+		}
+	}
+
+	&__title {
+		font-family: $font-title;
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 167%;
+		color: $color-black;
+	}
+
+	&__description {
+		// stylelint-disable-next-line
+		display: -webkit-box;
+		overflow: hidden;
+		line-height: 135%;
+		text-overflow: ellipsis;
+		// stylelint-disable-next-line
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 3;
+	}
+
+	&__info {
+		display: flex;
+		padding-top: 15px;
+		gap: 20px;
+
+		li {
+			display: flex;
+			align-items: center;
+			gap: 7px;
+		}
+
+		svg {
+			width: 20px;
+			height: 20px;
+			fill: $color-dark-gray;
+		}
+	}
+}
+
+@media (hover: hover) and (pointer: fine) {
+	.podcast-card__img:hover {
+		.podcast-card__play-icon {
+			border-radius: 0;
+			width: 101%;
+			height: 101%;
+		}
+
+		svg {
+			width: 42px;
+			height: 42px;
+		}
+	}
+}

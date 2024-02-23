@@ -1,0 +1,46 @@
+section.latest-popular
+	.container
+		.latest-popular__head
+			h2.latest-popular__title Свежие подкасты
+			p.latest-popular__description Знакомьтесь с самыми свежими историями ведущих подкастеров со всего мира, а также с проверенными создателями технологий.
+			a(href="#").latest-popular__link-all.button.button-fill Показать все
+		.latest-popular__content
+			each object, key in data.latest_popular.cards
+				.latest-popular__card.podcast-card(data-link=key)
+					a(href=object.url)
+						.podcast-card__img
+							img(src=object.img_src, alt=object.img_alt)
+							span.podcast-card__play-icon
+								+svg("play")
+					h3.podcast-card__title!= object.title
+					p.podcast-card__description!= object.desc
+					ul.podcast-card__info
+						li
+							+svg("phones")
+							span!= object.auditions
+						li
+							+svg("heart")
+							span!= object.likes
+						li
+							+svg("comment")
+							span!= object.comments
+
+
+			//- .latest-popular__card.podcast-card
+			//- 	a(href="#")
+			//- 		.podcast-card__img
+			//- 			img(src="images/mjJJ3YEPNl8.jpg", alt="Фото автора подкаста")
+			//- 			span.podcast-card__play-icon
+			//- 				+svg("play")
+			//- 	h3.podcast-card__title Комедия и развлечения
+			//- 	p.podcast-card__description Наслаждайтесь веселыми разговорами, стендап-комедиями и дискуссиями о фильмах
+			//- 	ul.podcast-card__info
+			//- 		li
+			//- 			+svg("phones")
+			//- 			span 1.5k
+			//- 		li
+			//- 			+svg("heart")
+			//- 			span 875
+			//- 		li
+			//- 			+svg("comment")
+			//- 			span 752
