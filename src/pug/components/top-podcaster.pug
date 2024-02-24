@@ -1,0 +1,26 @@
+section.top-podcaster
+	.container
+		.top-podcaster__head
+			h2.top-podcaster__title.section-title Топовые подкастеры
+			a(href="#").button.button-fill Посмотреть всех
+		.top-podcaster__content
+			each object, key in data.top_podcaster.porcasters
+				.top-podcaster__card.podcaster-card(data-link=key)
+					a(href="#").podcaster-page-link
+						img(src=object.img_url, alt=object.img_alt)
+					.podcaster-card__content
+						h3.podcaster-card__name!=object.name
+						.podcaster-card__info
+							span.podcaster-card__theme!=object.theme
+							br
+							span.podcaster-card__number-of-episodes!=object.num_of_episodes
+						ul.podcaster-card__links
+							li
+								a(href="#")
+									+svg("fb")
+							li
+								a(href="#")
+									+svg("tw")
+							li
+								a(href="#")
+									+svg("inst")
