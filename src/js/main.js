@@ -8,6 +8,7 @@ import {actualYear} from './modules/actualYear';
 import header from './components/header';
 import audioPlayer from './components/UI/audioPlayer';
 import categoriesSlider from './components/categoriesSlider';
+import featuredShowsSlider from './components/featuredShowsSlider';
 
 import lazyLoading from './modules/lazyLoading';
 import scrollToAnchor from './modules/scrollToAnchor';
@@ -20,5 +21,6 @@ scrollToAnchor.init();
 header.headerBackgroudScroll();
 audioPlayer.audioPlayer();
 categoriesSlider.categoriesSlider();
+featuredShowsSlider.featuredShowsSlider();
 
 lazyLoading.init();
