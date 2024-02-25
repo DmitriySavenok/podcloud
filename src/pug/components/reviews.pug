@@ -1,2 +1,31 @@
-//- section.reviews
-//- 	.reviews__content.container
+section.reviews
+	.reviews__head
+		h2.reviews__title.section-title Что говорят о нас наши пользователи?
+		p.reviews__description В каждом эпизоде мы выделяем и дополняем отзывы, рекомендательные письма и истории, которыми делятся сами пользователи, предоставляя достоверный и привлекательный взгляд на ценность и влияние предложения.
+	.reviews__content.container
+		svg(class="reviews__image" width="575" height="544" viewBox="0 0 575 544")
+			mask(id="reviews-img-svgmask")
+				path(fill-rule="evenodd" clip-rule="evenodd" d="M0 60C0 31.7157 0 17.5736 8.7868 8.7868C17.5736 0 31.7157 0 60 0H515C518.55 0 521.878 0 525 0.0173786V49.9083H574.982C575 53.0569 575 56.4148 575 60V484C575 512.284 575 526.426 566.213 535.213C557.426 544 543.284 544 515 544H60C56.4496 544 53.1221 544 50 543.983V494L70 494C74.714 494 77.0711 494 78.5355 492.535C80 491.071 80 488.714 80 484V474C80 469.286 80 466.929 78.5355 465.464C77.0711 464 74.714 464 70 464H60C55.286 464 52.9289 464 51.4645 465.464C50 466.929 50 469.286 50 474V494H0.0173779C0 490.878 0 487.55 0 484V60ZM496.464 51.3728C495 52.8372 495 55.1943 495 59.9083V69.8533C495 74.5673 495 76.9243 496.464 78.3888C497.929 79.8533 500.286 79.8533 505 79.8533H515C519.714 79.8533 522.071 79.8533 523.536 78.3888C525 76.9243 525 74.5673 525 69.8533V49.9083H505C500.286 49.9083 497.929 49.9083 496.464 51.3728Z" fill="white")
+			image(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/UqN3oCOiIv0.jpg" mask="url(#reviews-img-svgmask)")
+		.reviews__slider
+			.swiper-wrapper
+				each object, key in data.reviews.users
+					.reviews__card.swiper-slide(data-link=key)
+						.reviews__rating(class=object.user_rating)
+							+svg("rating-star")
+							+svg("rating-star")
+							+svg("rating-star")
+							+svg("rating-star")
+							+svg("rating-star")
+						p.reviews__card-text!=object.user_text
+						.reviews__user
+							.reviews__user-photo
+								img(src=object.user_photo_src alt=object.img_alt)
+							span.reviews__user-name!=object.user_name
+							span.reviews__user-country!=object.user_country
+
+		.reviews__slider-navigation
+			button.slider-nav-btn.slide-btn-prev.reviews__slide-btn-prev
+				+svg("arrow-right")
+			button.slider-nav-btn.slide-btn-next.reviews__slide-btn-next
+				+svg("arrow-right")
