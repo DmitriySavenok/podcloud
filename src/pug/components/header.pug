@@ -3,6 +3,13 @@ header.header
 		a(href="#").header__logo.logo
 			+svg("logo")
 			span.logo-text PodCloud
+		.header__menu-btn.menu-icon
+			<label for="check">
+				<input type="checkbox" id="check"/>
+				<span></span>
+				<span></span>
+				<span></span>
+			</label>
 		nav.header__navigation
 			each object, key in data.header.navigation
 				a.header__navigation-link.js-to-anchor(href=object.url data-link=key)
@@ -14,5 +21,6 @@ header.header
 				<form name="search">
 					<input type="text" class="search__input" placeholder="авторы, темы, названия">
 				</form>
-				+svg("search").search__icon
+				+svg("search").header__search-btn.search__icon
+				+svg("close").header__close-btn.close__icon
 			a(href="#").header__log-in.button.button-fill Войти

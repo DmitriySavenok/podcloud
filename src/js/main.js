@@ -20,6 +20,7 @@ actualYear();
 scrollToAnchor.init();
 
 header.headerBackgroudScroll();
+header.headerSearchInput();
 audioPlayer.audioPlayer();
 categoriesSlider.categoriesSlider();
 featuredShowsSlider.featuredShowsSlider();
