@@ -5,8 +5,6 @@ import $ from 'jquery';
 import objectFitImages from 'object-fit-images';
 // import objectFitVideos from 'object-fit-videos';
 
-import 'simplebar';
-
 svg4everybody();
 objectFitImages();
 // objectFitVideos();

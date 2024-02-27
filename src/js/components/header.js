@@ -1,16 +1,17 @@
+import SimpleBar from 'simplebar'
+
 function headerBackgroudScroll() {
 	const header = document.querySelector('.header');
-	header.classList.remove('header--scrolling');
-	if(window.scrollY != 0) {
-		header.classList.add('header--scrolling');
-	} else {
-		header.classList.remove('header--scrolling');
-	}
-	window.addEventListener('scroll', function () {
-		if (window.scrollY >= 54) {
-			header.classList.add('header--scrolling');
+	const pageContent = document.querySelector('main');
+
+	const simpleBar = new SimpleBar(document.getElementById('site'));
+	simpleBar.getScrollElement().addEventListener('scroll', function() {
+		let rect = pageContent.getBoundingClientRect();
+
+		if(rect.top < -54) {
+			header.classList.add('header--scrolling')
 		} else {
-			header.classList.remove('header--scrolling');
+			header.classList.remove('header--scrolling')
 		}
 	});
 }

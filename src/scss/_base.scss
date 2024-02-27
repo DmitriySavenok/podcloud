@@ -145,9 +145,14 @@ iframe {
 .site {
 	display: flex;
 	flex-direction: column;
-	min-height: 100vh; // fallback
+
 	// stylelint-disable-next-line
-	min-height: var(--vh);
+	// min-height: 100vh; // fallback
+
+	// stylelint-disable-next-line
+	// min-height: var(--vh);
+
+	height: 100vh;
 	background-color: $background-dark;
 }
 
