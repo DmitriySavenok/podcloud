@@ -213,3 +213,63 @@
 		transition: opacity $duration-normal;
 	}
 }
+
+@media (max-width: 1290px) {
+	.hero {
+		&__content {
+			display: block;
+		}
+
+		&__image-1 {
+			display: none;
+		}
+
+		&__info-card.card-1 {
+			position: static;
+		}
+
+		&__info-card.card-2 {
+			position: static;
+		}
+
+		&__image-2 {
+			display: none;
+		}
+
+		&__main-info {
+			padding-top: 0;
+		}
+
+		&__interactive-block {
+			display: flex;
+			justify-content: space-between;
+			gap: 15px;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.hero {
+		&__interactive-block {
+			flex-direction: column;
+		}
+
+		&__info-card {
+			width: 100%;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.hero {
+		&__main-title {
+			font-size: 32px;
+		}
+
+		&__info-card {
+			img {
+				display: none;
+			}
+		}
+	}
+}
