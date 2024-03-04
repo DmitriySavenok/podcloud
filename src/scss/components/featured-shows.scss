@@ -32,11 +32,23 @@
 		left: 50%;
 		top: 50%;
 		z-index: 3;
-		display: flex;
-		justify-content: space-between;
-		padding: 0 20px;
-		width: 100%;
 		transform: translate(-50%, -50%);
+	}
+
+	&__slide-btn-prev {
+		position: absolute;
+		left: 0;
+		top: 50%;
+		z-index: 3;
+		transform: translateY(-50%);
+	}
+
+	&__slide-btn-next {
+		position: absolute;
+		right: 0;
+		top: 50%;
+		z-index: 3;
+		transform: translateY(-50%);
 	}
 
 	.show-card {
@@ -52,6 +64,7 @@
 			img {
 				width: 100%;
 				height: auto;
+				object-fit: cover;
 			}
 		}
 
@@ -105,7 +118,7 @@
 
 		&__browse-link {
 			border-radius: 0;
-			width: calc(100% - 60px);
+			width: 100%;
 		}
 	}
 }

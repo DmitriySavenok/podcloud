@@ -1,5 +1,7 @@
 .categories {
+	overflow: hidden;
 	padding-bottom: 120px;
+	box-sizing: border-box;
 	background-color: $color-white;
 
 	&__content {

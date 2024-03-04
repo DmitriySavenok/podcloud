@@ -18,12 +18,15 @@
 		position: absolute;
 		right: 20px;
 		top: 50%;
-		width: 20px;
-		height: 20px;
 		fill: $color-white;
 		opacity: 1;
 		transform: translate(-50%, -50%);
 		transition: opacity $duration-normal;
+	}
+
+	.search__icon {
+		width: 20px;
+		height: 20px;
 	}
 
 	.close__icon {

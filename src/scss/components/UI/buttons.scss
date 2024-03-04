@@ -20,6 +20,12 @@
 	}
 }
 
+.button:active {
+	box-shadow: 0 0 10px 12px rgba(26, 18, 36, 0.2) inset;
+	background-color: $accent-color-hover;
+	transition: box-shadow $duration-normal;
+}
+
 .button-fill {
 	border: 1px $accent-color solid;
 	color: $color-white;
@@ -81,15 +87,15 @@
 	}
 }
 
+.slider-nav-btn:not(.swiper-button-disabled):active {
+	box-shadow: 0 0 10px 12px rgba(26, 18, 36, 0.2) inset;
+	background-color: $accent-color-hover;
+	transition: box-shadow $duration-normal;
+}
+
 @media (hover: hover) and (pointer: fine) {
 	.button-fill:hover {
 		background-color: $accent-color-hover;
-	}
-
-	.button:active {
-		box-shadow: 0 0 10px 12px rgba(26, 18, 36, 0.2) inset;
-		background-color: $accent-color-hover;
-		transition: box-shadow $duration-normal;
 	}
 
 	.button-outline:hover {
@@ -100,11 +106,5 @@
 
 	.slider-nav-btn:not(.swiper-button-disabled):hover {
 		background-color: $accent-color-hover;
-	}
-
-	.slider-nav-btn:not(.swiper-button-disabled):active {
-		box-shadow: 0 0 10px 12px rgba(26, 18, 36, 0.2) inset;
-		background-color: $accent-color-hover;
-		transition: box-shadow $duration-normal;
 	}
 }

@@ -2,8 +2,8 @@ section.featured-shows
 	.featured-shows__head
 		h2.featured-shows__title.section-title Избранные шоу
 		p.featured-shows__description Знакомьтесь с самыми свежими историями ведущих подкастеров со всего мира, а также с проверенными создателями технологий.
-	.featured-shows__content
-		.featured-shows__slider.container
+	.featured-shows__content.container
+		.featured-shows__slider
 			.swiper-wrapper
 				.swiper-slide.featured-shows__slide-card.show-card
 					.show-card__img
@@ -80,9 +80,7 @@ section.featured-shows
 								span.show-card__theme Что мы знаем о эмоциях насекомых.
 					a(href="#").button.button-fill.show-card__browse-link Все эпизоды
 
-
-		.featured-shows__slider-navigation
-			button.slider-nav-btn.slide-btn-prev.featured-shows__slide-btn-prev
-				+svg("arrow-right")
-			button.slider-nav-btn.slide-btn-next.featured-shows__slide-btn-next
-				+svg("arrow-right")
+		button.slider-nav-btn.slide-btn-prev.featured-shows__slide-btn-prev
+			+svg("arrow-right")
+		button.slider-nav-btn.slide-btn-next.featured-shows__slide-btn-next
+			+svg("arrow-right")
