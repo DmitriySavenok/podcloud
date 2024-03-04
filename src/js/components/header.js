@@ -1,7 +1,12 @@
 import SimpleBar from 'simplebar'
 
 function headerToggleMenu() {
-
+	const header = document.querySelector('.header');
+	const menuBtn = document.querySelector('#header__menu-btn')
+	menuBtn.addEventListener('click', function() {
+		header.classList.toggle('header--menu-opened')
+		menuBtn.classList.toggle('header__menu-btn--close')
+	})
 }
 
 function headerSearchInput() {
@@ -39,5 +44,6 @@ function headerBackgroudScroll() {
 
 export default {
 	headerBackgroudScroll,
-	headerSearchInput
+	headerSearchInput,
+	headerToggleMenu
 }

@@ -3,18 +3,14 @@ header.header
 		a(href="#").header__logo.logo
 			+svg("logo")
 			span.logo-text PodCloud
-		.header__menu-btn.menu-icon
-			<label for="check">
-				<input type="checkbox" id="check"/>
-				<span></span>
-				<span></span>
-				<span></span>
-			</label>
+		button.header__menu-btn#header__menu-btn
+			span
+			span
+			span
 		nav.header__navigation
 			each object, key in data.header.navigation
 				a.header__navigation-link.js-to-anchor(href=object.url data-link=key)
 					!= object.name
-
 
 		.header__buttons-block
 			.search

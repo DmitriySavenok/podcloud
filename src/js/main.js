@@ -21,6 +21,7 @@ scrollToAnchor.init();
 
 header.headerBackgroudScroll();
 header.headerSearchInput();
+header.headerToggleMenu();
 audioPlayer.audioPlayer();
 categoriesSlider.categoriesSlider();
 featuredShowsSlider.featuredShowsSlider();
