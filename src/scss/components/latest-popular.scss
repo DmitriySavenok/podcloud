@@ -128,3 +128,47 @@
 		}
 	}
 }
+
+@media (max-width: 1290px) {
+	.latest-popular {
+		&__content {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		&__head {
+			grid-template-columns: 2fr 1fr;
+		}
+	}
+
+	.podcast-card {
+		&__img {
+			height: auto;
+			aspect-ratio: 1 / 1;
+
+			img {
+				width: 100%;
+				height: auto;
+				object-fit: cover;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.latest-popular {
+		&__content {
+			grid-template-columns: 1fr;
+		}
+
+		&__head {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 20px;
+		}
+
+		&__link-all {
+			align-self: flex-start;
+		}
+	}
+}

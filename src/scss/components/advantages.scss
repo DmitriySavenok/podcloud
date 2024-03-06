@@ -99,3 +99,26 @@
 		}
 	}
 }
+
+@media (max-width: 1290px) {
+	.advantages {
+		padding: 60px 0;
+
+		&__content {
+			display: block;
+		}
+
+		&__image {
+			width: 100%;
+			height: auto;
+		}
+
+		&__audio {
+			flex-wrap: wrap;
+		}
+
+		.author-info {
+			width: max-content;
+		}
+	}
+}

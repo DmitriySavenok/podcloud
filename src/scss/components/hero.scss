@@ -218,6 +218,8 @@
 	.hero {
 		&__content {
 			display: block;
+			padding-top: 160px;
+			padding-bottom: 60px;
 		}
 
 		&__image-1 {
@@ -226,10 +228,12 @@
 
 		&__info-card.card-1 {
 			position: static;
+			width: 100%;
 		}
 
 		&__info-card.card-2 {
 			position: static;
+			width: 100%;
 		}
 
 		&__image-2 {
@@ -250,20 +254,12 @@
 
 @media (max-width: 768px) {
 	.hero {
-		&__interactive-block {
-			flex-direction: column;
-		}
-
-		&__info-card {
-			width: 100%;
-		}
-	}
-}
-
-@media (max-width: 768px) {
-	.hero {
 		&__main-title {
 			font-size: 32px;
+		}
+
+		&__interactive-block {
+			flex-direction: column;
 		}
 
 		&__info-card {

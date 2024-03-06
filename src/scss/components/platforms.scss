@@ -28,3 +28,16 @@
 		}
 	}
 }
+
+@media (max-width: 768px) {
+	.platforms {
+		&__list {
+			flex-wrap: wrap;
+			gap: 30px;
+
+			svg {
+				opacity: 100%;
+			}
+		}
+	}
+}
