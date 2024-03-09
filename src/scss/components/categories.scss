@@ -122,3 +122,25 @@
 		transform: translateX(-184%);
 	}
 }
+
+@media (max-width: 920px) {
+	.categories {
+		padding-bottom: 60px;
+		background-color: $color-black;
+
+		&__bg {
+			display: none;
+		}
+
+		&__list {
+			flex-wrap: wrap;
+			justify-content: center;
+			padding: 20px;
+			gap: 30px;
+
+			a {
+				color: $color-white;
+			}
+		}
+	}
+}

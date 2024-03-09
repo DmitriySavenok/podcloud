@@ -251,3 +251,21 @@
 		}
 	}
 }
+
+@media (max-width: 1280px) {
+	.footer {
+		&__subscribe {
+			padding: 50px;
+		}
+
+		.subscribe-bg-img::before,
+		.subscribe-bg-img::after {
+			display: none;
+		}
+
+		.subscribe-input {
+			width: 100%;
+			min-width: 100%;
+		}
+	}
+}

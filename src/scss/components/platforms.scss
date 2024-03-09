@@ -33,6 +33,7 @@
 	.platforms {
 		&__list {
 			flex-wrap: wrap;
+			justify-content: center;
 			gap: 30px;
 
 			svg {
