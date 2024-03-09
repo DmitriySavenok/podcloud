@@ -126,7 +126,10 @@
 @media (max-width: 920px) {
 	.categories {
 		padding-bottom: 60px;
-		background-color: $color-black;
+
+		&__title {
+			padding: 0;
+		}
 
 		&__bg {
 			display: none;
@@ -135,11 +138,13 @@
 		&__list {
 			flex-wrap: wrap;
 			justify-content: center;
-			padding: 20px;
+			padding: 0 20px;
 			gap: 30px;
 
-			a {
-				color: $color-white;
+			.categories__link {
+				font-size: 24px;
+				color: $accent-color;
+				opacity: 1;
 			}
 		}
 	}
