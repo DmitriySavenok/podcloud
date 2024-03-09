@@ -267,5 +267,43 @@
 			width: 100%;
 			min-width: 100%;
 		}
+
+		.subscribe-title {
+			font-size: 6vw;
+		}
+
+		&__content {
+			display: flex;
+			flex-direction: column;
+			gap: 15px;
+		}
+
+		&__logo {
+			display: none;
+		}
+
+		&__column {
+			padding: 0;
+		}
+
+		.privacy-policy {
+			order: 2;
+		}
+
+		.user-agreement {
+			order: 1;
+		}
+
+		&__copyright {
+			order: 3;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.footer {
+		&__subscribe {
+			min-width: 100%;
+		}
 	}
 }
