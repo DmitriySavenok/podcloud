@@ -4,11 +4,17 @@ import { Navigation } from 'swiper/modules';
 function reviewsSlider() {
 	const swiper = new Swiper('.reviews__slider', {
 		modules: [Navigation],
-		slidesPerView: 2.5,
-		spaceBetween: 30,
-		centeredSlides: true,
-		crossFade: true,
-		simulateTouch: false,
+		slidesPerView: 1,
+
+		breakpoints: {
+			768: {
+				slidesPerView: 2.5,
+				spaceBetween: 30,
+				centeredSlides: true,
+				crossFade: true,
+				simulateTouch: false,
+			},
+		},
 
 		navigation: {
 		  nextEl: '.reviews__slide-btn-next',

@@ -46,6 +46,10 @@
 		display: flex;
 		justify-content: flex-end;
 		gap: 20px;
+
+		.reviews__slide-btn-prev {
+			transform: rotate(180deg);
+		}
 	}
 
 	&__card {
@@ -114,6 +118,34 @@
 			font-weight: 300;
 			font-size: 16px;
 			color: $color-dark-gray;
+		}
+	}
+}
+
+@media (max-width: 1080px) {
+	.reviews {
+		&__content {
+			display: flex;
+			flex-direction: column;
+			gap: 15px;
+		}
+
+		&__image {
+			width: 100%;
+			height: auto;
+		}
+
+		&__slider {
+			position: static;
+			transform: translateY(0);
+
+			.swiper-slide-prev {
+				opacity: 0.2;
+			}
+		}
+
+		&__slider-navigation {
+			justify-content: center;
 		}
 	}
 }
